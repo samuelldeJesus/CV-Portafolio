@@ -1,0 +1,968 @@
+/* =========================================================
+   RESPONSIVE
+   Tablets y móviles
+========================================================= */
+
+
+/* =========================================================
+   TABLET
+   Hasta 1024px
+========================================================= */
+
+@media (max-width: 1024px) {
+
+    /* ---------- CONTENEDOR PRINCIPAL ---------- */
+
+    .perfil {
+        width: 260px;
+    }
+
+
+    /* ---------- MENÚ ---------- */
+
+    .info_header ul {
+        gap: 15px;
+        padding-left: 15px;
+    }
+
+    .info_header a {
+        gap: 7px;
+        padding: 7px 9px;
+        font-size: 13px;
+    }
+
+
+    /* ---------- HERO ---------- */
+
+    .info_hero {
+        height: 240px;
+    }
+
+    .info_hero-texto {
+        width: 300px;
+        left: 4%;
+    }
+
+    .info_hero-texto h1 {
+        font-size: 23px;
+    }
+
+
+    /* ---------- CAJAS INICIO ---------- */
+
+    .info_cajas {
+        gap: 12px;
+        padding: 8px;
+    }
+
+    .info_cajas-caja {
+        padding: 16px;
+    }
+
+
+    /* ---------- SOBRE MÍ ---------- */
+
+    .sobre_mi_contenido,
+    .formacion_contenido,
+    .experiencia_contenido,
+    .portafolio_contenido {
+        padding: 25px;
+    }
+
+
+    /* ---------- PORTAFOLIO ---------- */
+
+    .portafolio_grid {
+        gap: 15px;
+    }
+
+}
+
+
+
+/* =========================================================
+   MÓVIL
+   Hasta 768px
+========================================================= */
+
+@media (max-width: 768px) {
+
+
+    /* =====================================================
+       CUERPO
+    ===================================================== */
+
+    body {
+        margin: 10px;
+        display: block;
+        min-height: 100vh;
+    }
+
+
+    /* =====================================================
+       CONTENEDOR PRINCIPAL
+    ===================================================== */
+
+    .caja_principal {
+        width: 100%;
+        height: auto;
+        min-height: 100vh;
+
+        display: flex;
+        flex-direction: column;
+
+        border-radius: 15px;
+
+        overflow: visible;
+    }
+
+
+    /* =====================================================
+       PERFIL
+    ===================================================== */
+
+    .perfil {
+        width: 100%;
+        flex-shrink: 0;
+    }
+
+
+    /* ---------- FOTO ---------- */
+
+    .perfil_foto {
+        padding-top: 25px;
+        gap: 8px;
+    }
+
+    .perfil_foto img {
+        width: 120px;
+    }
+
+    .perfil_foto h2 {
+        font-size: 20px;
+        text-align: center;
+    }
+
+    .perfil_foto p {
+        font-size: 14px;
+        text-align: center;
+    }
+
+    .linea {
+        width: 60%;
+    }
+
+
+    /* ---------- CONTACTO ---------- */
+
+    .perfil_iconos {
+        margin: 25px;
+        gap: 12px;
+    }
+
+    .perfil_iconos a {
+        font-size: 13px;
+    }
+
+
+    /* ---------- BOTÓN CONTACTO ---------- */
+
+    .perfil_button {
+        width: 60%;
+        margin: 20px auto 30px;
+    }
+
+
+
+    /* =====================================================
+       INFORMACIÓN PRINCIPAL
+    ===================================================== */
+
+    .informacion {
+        width: 100%;
+        height: auto;
+
+        box-shadow: none;
+
+        border-radius: 0 0 15px 15px;
+    }
+
+
+    /* =====================================================
+       MENÚ DE NAVEGACIÓN
+    ===================================================== */
+
+    .info_header {
+        width: 100%;
+
+        position: sticky;
+        top: 0;
+
+        z-index: 10;
+
+        background-color: var(--fondo);
+    }
+
+
+    .info_header ul {
+        width: 100%;
+
+        display: flex;
+
+        gap: 8px;
+
+        padding: 10px;
+
+        margin: 0;
+
+        overflow-x: auto;
+
+        justify-content: flex-start;
+
+        scrollbar-width: none;
+    }
+
+
+    /* Ocultar scrollbar en Chrome, Edge y Safari */
+
+    .info_header ul::-webkit-scrollbar {
+        display: none;
+    }
+
+
+    .info_header li {
+        flex-shrink: 0;
+    }
+
+
+    .info_header a {
+        gap: 6px;
+
+        padding: 7px 10px;
+
+        font-size: 12px;
+
+        white-space: nowrap;
+
+        border-radius: 12px;
+    }
+
+
+    .info_header a.active {
+        padding: 7px 10px;
+        margin-top: 0;
+    }
+
+
+    .info_header img {
+        width: 18px;
+        height: 18px;
+    }
+
+
+
+    /* =====================================================
+       CONTENIDO CON SCROLL
+    ===================================================== */
+
+    .contenido_scroll {
+        width: 100%;
+        overflow: visible;
+    }
+
+
+
+    /* =====================================================
+       HERO
+    ===================================================== */
+
+    .info_hero {
+        width: 100%;
+        height: 320px;
+
+        border-radius: 0 0 15px 15px;
+    }
+
+
+    .info_hero img {
+        object-position: center;
+    }
+
+
+    /* ---------- TEXTO HERO ---------- */
+
+    .info_hero-texto {
+        width: calc(100% - 40px);
+
+        left: 20px;
+
+        top: 42%;
+
+        transform: translateY(-50%);
+
+        gap: 8px;
+    }
+
+
+    .info_hero-texto h1 {
+        font-size: 22px;
+        line-height: 1.2;
+    }
+
+
+    .info_hero-texto .texto {
+        color: var(--textonegro);
+        font-size: 13px;
+        line-height: 1.5;
+    }
+
+
+    .destaque_p {
+        font-size: 11px;
+        color: white;
+    }
+
+
+    /* ---------- TECNOLOGÍAS HERO ---------- */
+
+    .info_hero-bloques {
+        left: 20px;
+        right: 20px;
+
+        bottom: 12px;
+
+        gap: 6px;
+
+        flex-wrap: wrap;
+    }
+
+
+    .info_hero-bloques p {
+        padding: 5px 9px;
+
+        font-size: 11px;
+
+        border-radius: 10px;
+    }
+
+
+
+    /* =====================================================
+       CAJAS DE INICIO
+    ===================================================== */
+
+    .info_cajas {
+        width: 100%;
+
+        display: flex;
+        flex-direction: column;
+
+        gap: 12px;
+
+        padding: 10px;
+    }
+
+
+    .info_cajas-caja {
+        width: 100%;
+
+        padding: 16px;
+
+        border-radius: 15px;
+    }
+
+
+    .caja-icon {
+        width: 40px;
+    }
+
+
+    .caja-icon img {
+        width: 27px;
+        height: 27px;
+    }
+
+
+    .caja-texto {
+        width: auto;
+
+        flex: 1;
+
+        padding-right: 5px;
+    }
+
+
+    .caja-texto .link {
+        font-size: 17px;
+    }
+
+
+    .caja-texto .titulo {
+        font-size: 13px;
+    }
+
+
+    .caja-texto p {
+        font-size: 12px;
+        line-height: 1.5;
+    }
+
+
+
+    /* =====================================================
+       SOBRE MÍ
+    ===================================================== */
+
+    .sobre_mi_contenido {
+        padding: 20px 15px;
+    }
+
+
+    .sobre_mi_titulo {
+        margin-bottom: 20px;
+    }
+
+
+    .sobre_mi_titulo h2 {
+        font-size: 24px;
+    }
+
+
+    .sobre_mi_titulo > p:last-child {
+        font-size: 13px;
+        line-height: 1.5;
+    }
+
+
+    /* ---------- PRESENTACIÓN ---------- */
+
+    .sobre_mi_presentacion {
+        flex-direction: column;
+
+        align-items: center;
+
+        gap: 20px;
+
+        padding: 20px;
+
+        text-align: center;
+
+        border-radius: 15px;
+    }
+
+
+    .sobre_mi_imagen {
+        width: 120px;
+        height: 120px;
+    }
+
+
+    .sobre_mi_texto {
+        gap: 9px;
+    }
+
+
+    .sobre_mi_texto h3 {
+        font-size: 20px;
+    }
+
+
+    .sobre_mi_texto p {
+        font-size: 12px;
+        line-height: 1.6;
+    }
+
+
+    /* ---------- CAJAS SOBRE MÍ ---------- */
+
+    .sobre_mi_cajas {
+        grid-template-columns: 1fr;
+
+        gap: 12px;
+
+        margin-top: 12px;
+    }
+
+
+    .sobre_mi_caja {
+        padding: 16px;
+
+        border-radius: 15px;
+    }
+
+
+    .sobre_mi_caja_texto h3 {
+        font-size: 16px;
+    }
+
+
+    .sobre_mi_caja_texto p {
+        font-size: 12px;
+    }
+
+
+    /* ---------- HABILIDADES ---------- */
+
+    .sobre_mi_habilidades {
+        margin-top: 12px;
+
+        padding: 20px;
+
+        border-radius: 15px;
+    }
+
+
+    .sobre_mi_habilidades_titulo h3 {
+        font-size: 18px;
+    }
+
+
+    .sobre_mi_tecnologias {
+        gap: 6px;
+    }
+
+
+    .sobre_mi_tecnologias span {
+        padding: 6px 9px;
+
+        font-size: 11px;
+    }
+
+
+
+    /* =====================================================
+       ESTUDIOS
+    ===================================================== */
+
+    .formacion_contenido {
+        padding: 20px 15px;
+    }
+
+
+    .formacion_titulo {
+        margin-bottom: 20px;
+    }
+
+
+    .formacion_titulo h2 {
+        font-size: 24px;
+    }
+
+
+    .formacion_titulo > p:last-child {
+        font-size: 13px;
+        line-height: 1.5;
+    }
+
+
+    .formacion_lista {
+        gap: 12px;
+    }
+
+
+    .formacion_item {
+        grid-template-columns: 1fr;
+
+        gap: 12px;
+
+        padding: 18px;
+
+        border-radius: 15px;
+    }
+
+
+    .formacion_icono {
+        width: 42px;
+        height: 42px;
+    }
+
+
+    .formacion_icono img {
+        width: 25px;
+        height: 25px;
+    }
+
+
+    .formacion_info {
+        gap: 7px;
+    }
+
+
+    .formacion_info h3 {
+        font-size: 17px;
+        line-height: 1.3;
+    }
+
+
+    .formacion_centro {
+        font-size: 12px;
+    }
+
+
+    .formacion_info > p:not(.formacion_centro) {
+        font-size: 12px;
+        line-height: 1.5;
+    }
+
+
+    .formacion_tecnologias {
+        gap: 5px;
+    }
+
+
+    .formacion_tecnologias span {
+        padding: 5px 8px;
+
+        font-size: 10px;
+    }
+
+
+
+    /* =====================================================
+       EXPERIENCIA
+    ===================================================== */
+
+    .experiencia_contenido {
+        padding: 20px 15px;
+    }
+
+
+    .experiencia_titulo {
+        margin-bottom: 20px;
+    }
+
+
+    .experiencia_titulo h2 {
+        font-size: 24px;
+    }
+
+
+    .experiencia_titulo > p:last-child {
+        font-size: 13px;
+        line-height: 1.5;
+    }
+
+
+    .experiencia_lista {
+        gap: 12px;
+    }
+
+
+    .experiencia_item {
+        grid-template-columns: 1fr;
+
+        gap: 12px;
+
+        padding: 18px;
+
+        border-radius: 15px;
+    }
+
+
+    .experiencia_fecha {
+        justify-content: flex-start;
+    }
+
+
+    .experiencia_fecha span {
+        padding: 6px 10px;
+
+        font-size: 11px;
+
+        border-radius: 10px;
+    }
+
+
+    .experiencia_info {
+        gap: 7px;
+    }
+
+
+    .experiencia_info h3 {
+        font-size: 17px;
+        line-height: 1.3;
+    }
+
+
+    .experiencia_empresa {
+        font-size: 12px;
+    }
+
+
+    .experiencia_info > p:not(.experiencia_empresa) {
+        font-size: 12px;
+        line-height: 1.5;
+    }
+
+
+    .experiencia_info ul {
+        margin: 5px 0 5px 17px;
+    }
+
+
+    .experiencia_info li {
+        font-size: 12px;
+        line-height: 1.5;
+    }
+
+
+    .experiencia_tecnologias {
+        gap: 5px;
+    }
+
+
+    .experiencia_tecnologias span {
+        padding: 5px 8px;
+
+        font-size: 10px;
+    }
+
+
+
+    /* =====================================================
+       PORTAFOLIO
+    ===================================================== */
+
+    .portafolio_contenido {
+        padding: 20px 15px;
+    }
+
+
+    .portafolio_titulo {
+        margin-bottom: 20px;
+    }
+
+
+    .portafolio_titulo h2 {
+        font-size: 24px;
+    }
+
+
+    .portafolio_titulo > p:last-child {
+        font-size: 13px;
+        line-height: 1.5;
+    }
+
+
+    /* ---------- GRID ---------- */
+
+    .portafolio_grid {
+        grid-template-columns: 1fr;
+
+        gap: 15px;
+    }
+
+
+    /* ---------- TARJETA ---------- */
+
+    .proyecto {
+        border-radius: 15px;
+    }
+
+
+    /* ---------- IMAGEN ---------- */
+
+    .proyecto_imagen {
+        width: 100%;
+        height: 180px;
+    }
+
+
+    .proyecto_imagen img {
+        width: 100%;
+        height: 100%;
+
+        object-fit: cover;
+    }
+
+
+    /* ---------- INFORMACIÓN ---------- */
+
+    .proyecto_info {
+        padding: 17px;
+    }
+
+
+    .proyecto_info h3 {
+        font-size: 17px;
+        margin-bottom: 7px;
+    }
+
+
+    .proyecto_info p {
+        font-size: 12px;
+        line-height: 1.5;
+
+        margin-bottom: 12px;
+    }
+
+
+    /* ---------- TECNOLOGÍAS ---------- */
+
+    .proyecto_tecnologias {
+        gap: 5px;
+        margin-bottom: 12px;
+    }
+
+
+    .proyecto_tecnologias span {
+        padding: 5px 8px;
+
+        font-size: 10px;
+    }
+
+
+    /* ---------- ENLACE ---------- */
+
+    .proyecto_link {
+        font-size: 12px;
+    }
+
+}
+
+
+
+/* =========================================================
+   MÓVILES PEQUEÑOS
+   Hasta 480px
+========================================================= */
+
+@media (max-width: 480px) {
+
+
+    /* ---------- CUERPO ---------- */
+
+    body {
+        margin: 5px;
+    }
+
+
+    /* ---------- PERFIL ---------- */
+
+    .perfil_foto img {
+        width: 105px;
+    }
+
+
+    .perfil_foto h2 {
+        font-size: 18px;
+    }
+
+
+    .perfil_foto p {
+        font-size: 13px;
+    }
+
+
+    .perfil_iconos {
+        margin: 20px;
+        gap: 10px;
+    }
+
+
+    .perfil_iconos a {
+        font-size: 12px;
+    }
+
+
+    .perfil_button {
+        width: 70%;
+    }
+
+
+
+    /* ---------- MENÚ ---------- */
+
+    .info_header ul {
+        padding: 8px;
+        gap: 5px;
+    }
+
+
+    .info_header a {
+        padding: 6px 8px;
+        font-size: 11px;
+    }
+
+
+    .info_header a.active {
+        padding: 6px 8px;
+    }
+
+
+    .info_header img {
+        width: 16px;
+        height: 16px;
+    }
+
+
+
+    /* ---------- HERO ---------- */
+
+    .info_hero {
+        height: 340px;
+    }
+
+
+    .info_hero-texto {
+        left: 15px;
+
+        width: calc(100% - 30px);
+
+        top: 40%;
+    }
+
+
+    .info_hero-texto h1 {
+        font-size: 20px;
+    }
+
+
+    .info_hero-texto .texto {
+        font-size: 12px;
+    }
+
+
+    .info_hero-bloques {
+        left: 15px;
+        right: 15px;
+    }
+
+
+
+    /* ---------- CONTENIDO ---------- */
+
+    .sobre_mi_contenido,
+    .formacion_contenido,
+    .experiencia_contenido,
+    .portafolio_contenido {
+        padding: 18px 12px;
+    }
+
+
+
+    /* ---------- PORTAFOLIO ---------- */
+
+    .proyecto_imagen {
+        height: 160px;
+    }
+
+
+    .proyecto_info {
+        padding: 15px;
+    }
+
+
+
+    /* ---------- CAJAS ---------- */
+
+    .info_cajas {
+        padding: 7px;
+    }
+
+
+    .info_cajas-caja {
+        padding: 14px;
+    }
+
+}

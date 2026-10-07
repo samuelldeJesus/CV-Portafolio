@@ -1,0 +1,63 @@
+<link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+>
+
+
+<i class="fa-solid fa-user"></i>
+<i class="fa-solid fa-user-plus"></i>
+<i class="fa-solid fa-users"></i>
+<i class="fa-solid fa-user-tie"></i>
+<i class="fa-solid fa-address-card"></i>
+
+<i class="fa-solid fa-phone"></i>
+<i class="fa-solid fa-mobile-screen"></i>
+<i class="fa-solid fa-envelope"></i>
+<i class="fa-solid fa-location-dot"></i>
+<i class="fa-solid fa-globe"></i>
+<i class="fa-solid fa-link"></i>
+
+
+<i class="fa-brands fa-instagram"></i>
+<i class="fa-brands fa-facebook"></i>
+<i class="fa-brands fa-x-twitter"></i>
+<i class="fa-brands fa-tiktok"></i>
+<i class="fa-brands fa-youtube"></i>
+<i class="fa-brands fa-linkedin"></i>
+<i class="fa-brands fa-whatsapp"></i>
+<i class="fa-brands fa-telegram"></i>
+<i class="fa-brands fa-github"></i>
+
+<i class="fa-solid fa-house"></i>
+<i class="fa-solid fa-bars"></i>
+<i class="fa-solid fa-xmark"></i>
+<i class="fa-solid fa-arrow-left"></i>
+<i class="fa-solid fa-arrow-right"></i>
+<i class="fa-solid fa-chevron-left"></i>
+<i class="fa-solid fa-chevron-right"></i>
+<i class="fa-solid fa-chevron-down"></i>
+<i class="fa-solid fa-chevron-up"></i>
+
+<i class="fa-solid fa-briefcase"></i>
+<i class="fa-solid fa-building"></i>
+<i class="fa-solid fa-store"></i>
+<i class="fa-solid fa-shop"></i>
+<i class="fa-solid fa-chart-line"></i>
+<i class="fa-solid fa-file"></i>
+<i class="fa-solid fa-file-lines"></i>
+<i class="fa-solid fa-folder"></i>
+
+<i class="fa-solid fa-code"></i>
+<i class="fa-solid fa-laptop-code"></i>
+<i class="fa-solid fa-terminal"></i>
+<i class="fa-solid fa-database"></i>
+<i class="fa-solid fa-server"></i>
+<i class="fa-solid fa-globe"></i>
+<i class="fa-solid fa-mobile-screen"></i>
+
+<i class="fa-brands fa-html5"></i>
+<i class="fa-brands fa-css3-alt"></i>
+<i class="fa-brands fa-js"></i>
+<i class="fa-brands fa-react"></i>
+<i class="fa-brands fa-node-js"></i>
+<i class="fa-brands fa-github"></i>
