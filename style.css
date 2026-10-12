@@ -412,16 +412,17 @@ a {
 .caja-texto p {
     color: rgb(55, 55, 55);
     font-size: 13px;
-    margin-top: 6px;
+    margin-top: 5px;
 }
 
 .caja-texto h4 {
-    font-size: 20px;
-    margin-bottom: 5px;
+    font-size: 16px;
+    margin-bottom: 0;
 }
 
 .caja-texto h3 {
-    font-size: 28px;
+    font-size: 18px;
+    margin-top: 10px;
 }
 
 
@@ -1214,8 +1215,4 @@ a {
 
 .info_cajas-caja:hover {
     transform: translateY( -4px);
-}
-
-.button_ver a {
-    font-size: 16px;
 }
