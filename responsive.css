@@ -987,3 +987,72 @@
     }
 
 }
+
+
+
+/* ========================================
+   BOTÓN OCULTAR CONTACTO - TABLETS
+======================================== */
+
+.toggle_perfil {
+    display: none;
+}
+
+@media screen and (min-width: 769px) and (max-width: 1024px) {
+
+    .caja_principal {
+        position: relative;
+    }
+
+    .toggle_perfil {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        position: absolute;
+        left: 260px;
+        top: 50%;
+        transform: translate(-50%, -50%);
+
+        width: 34px;
+        height: 34px;
+
+        border: 2px solid var(--blanco);
+        border-radius: 50%;
+
+        background-color: var(--azul-cajatexto);
+        color: var(--azul-principal);
+
+        font-size: 13px;
+
+        box-shadow: 2px 2px 8px var(--sombra-boton);
+
+        cursor: pointer;
+        z-index: 100;
+
+        transition: all 0s ease;
+    }
+
+    .toggle_perfil:hover {
+        background-color: var(--azul-principal);
+        color: var(--blanco);
+
+        transform: translate(-50%, -50%) scale(1.12);
+    }
+
+    /* Ocultar perfil */
+    .caja_principal.perfil_oculto .perfil {
+        display: none;
+    }
+
+    /* Ampliar contenido */
+    .caja_principal.perfil_oculto .informacion {
+        width: 100%;
+        max-width: 100%;
+    }
+
+    /* Posición del botón con perfil oculto */
+    .caja_principal.perfil_oculto .toggle_perfil {
+        left: 10px;
+    }
+}
