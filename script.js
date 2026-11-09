@@ -34,3 +34,29 @@ enlaces.forEach(enlace => {
         }
     });
 });
+
+
+
+
+const togglePerfil = document.getElementById("togglePerfil");
+const cajaPrincipal = document.querySelector(".caja_principal");
+
+togglePerfil.addEventListener("click", () => {
+
+    cajaPrincipal.classList.toggle("perfil_oculto");
+
+    const oculto = cajaPrincipal.classList.contains("perfil_oculto");
+
+    // Cambiar solamente la flecha
+    const flecha = togglePerfil.querySelector("i");
+
+    flecha.classList.toggle("fa-chevron-left", !oculto);
+    flecha.classList.toggle("fa-chevron-right", oculto);
+
+    // Accesibilidad
+    togglePerfil.setAttribute(
+        "aria-label",
+        oculto ? "Mostrar contacto" : "Ocultar contacto"
+    );
+
+});
