@@ -15,14 +15,16 @@
 
     .perfil {
         width: 260px;
+        padding: 10px;
     }
 
 
     /* ---------- MENÚ ---------- */
 
     .info_header ul {
-        gap: 15px;
+        gap: 10px 15px;
         padding-left: 15px;
+        flex-wrap: wrap;
     }
 
     .info_header a {
@@ -215,18 +217,10 @@
 
         margin: 0;
 
-        overflow-x: auto;
+        /* Los enlaces bajan a otra línea cuando no caben */
+        flex-wrap: wrap;
 
-        justify-content: flex-start;
-
-        scrollbar-width: none;
-    }
-
-
-    /* Ocultar scrollbar en Chrome, Edge y Safari */
-
-    .info_header ul::-webkit-scrollbar {
-        display: none;
+        justify-content: center;
     }
 
 
@@ -988,8 +982,6 @@
 
 }
 
-
-
 /* ========================================
    BOTÓN OCULTAR CONTACTO - TABLETS
 ======================================== */
@@ -1003,6 +995,20 @@
     .caja_principal {
         position: relative;
     }
+
+    /* ---------- Perfil: se encoge con transición ---------- */
+
+    .perfil {
+        overflow: hidden;
+        transition: width 0.4s ease, opacity 0.3s ease, visibility 0s linear 0s;
+    }
+
+    /* El contenido del perfil mantiene su ancho y no se reorganiza al encogerse */
+    .perfil > * {
+        min-width: 260px;
+    }
+
+    /* ---------- Botón ---------- */
 
     .toggle_perfil {
         display: flex;
@@ -1030,7 +1036,11 @@
         cursor: pointer;
         z-index: 100;
 
-        transition: all 0s ease;
+        /* El botón se desliza al mismo ritmo que el perfil */
+        transition: left 0.4s ease,
+                    background-color 0.2s ease,
+                    color 0.2s ease,
+                    transform 0.2s ease;
     }
 
     .toggle_perfil:hover {
@@ -1040,19 +1050,31 @@
         transform: translate(-50%, -50%) scale(1.12);
     }
 
-    /* Ocultar perfil */
+    /* La flecha gira al ocultar */
+    .toggle_perfil i {
+        transition: transform 0.4s ease;
+    }
+
+    /* ---------- Estado: perfil oculto ---------- */
+
     .caja_principal.perfil_oculto .perfil {
-        display: none;
+        width: 0;
+        opacity: 0;
+        visibility: hidden;
+
+        /* visibility se aplica al terminar la animación */
+        transition: width 0.4s ease, opacity 0.3s ease, visibility 0s linear 0.4s;
     }
 
-    /* Ampliar contenido */
-    .caja_principal.perfil_oculto .informacion {
-        width: 100%;
-        max-width: 100%;
-    }
-
-    /* Posición del botón con perfil oculto */
     .caja_principal.perfil_oculto .toggle_perfil {
-        left: 10px;
+        left: 17px;
     }
+
+    .caja_principal.perfil_oculto .toggle_perfil i {
+        transform: rotate(180deg);
+    }
+}
+
+.destaque_p {
+    color: var(--azul-principal);
 }
