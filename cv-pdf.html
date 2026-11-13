@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Currículum profesional</title>
+
+    <link rel="stylesheet" href="pdf-style.css">
+
+    <!-- Librería para generar y descargar PDF -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js"></script>
+</head>
+
+<body>
+
+    <main id="curriculum-pdf">
+
+        <!-- CABECERA -->
+        <header class="cv-header">
+
+            <img id="cv-foto" class="cv-foto" src="" alt="Fotografía">
+
+            <div class="cv-presentacion">
+
+                <h1 id="cv-nombre"></h1>
+
+                <p id="cv-profesion" class="profesion"></p>
+
+                <div class="contactos">
+                    <p id="cv-telefono"></p>
+                    <p id="cv-email"></p>
+                    <p id="cv-linkedin"></p>
+                    <p id="cv-instagram"></p>
+                    <p id="cv-github"></p>
+                </div>
+
+            </div>
+
+        </header>
+
+        <section id="seccion-perfil">
+            <h2>Perfil profesional</h2>
+            <p id="cv-perfil"></p>
+        </section>
+
+        <section id="seccion-experiencia">
+            <h2>Experiencia profesional</h2>
+            <div id="cv-experiencias"></div>
+        </section>
+
+        <section id="seccion-estudios">
+            <h2>Formación académica</h2>
+            <div id="cv-estudios"></div>
+        </section>
+
+        <section id="seccion-habilidades">
+            <h2>Habilidades técnicas</h2>
+            <div id="cv-habilidades" class="habilidades"></div>
+        </section>
+
+        <section id="seccion-proyectos">
+            <h2>Proyectos destacados</h2>
+            <div id="cv-proyectos"></div>
+        </section>
+
+    </main>
+
+</body>
+</html>
