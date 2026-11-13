@@ -35,28 +35,34 @@ enlaces.forEach(enlace => {
     });
 });
 
+/* ==========================================
+   BOTÓN OCULTAR / MOSTRAR CONTACTO (TABLETS)
+========================================== */
+(function () {
+    const caja = document.querySelector(".caja_principal");
+    const boton = document.getElementById("togglePerfil");
 
+    if (!caja || !boton) return;
 
+    function actualizarBoton(oculto) {
+        const texto = oculto ? "Mostrar contacto" : "Ocultar contacto";
+        boton.setAttribute("aria-label", texto);
+        boton.setAttribute("title", texto);
+        boton.setAttribute("aria-expanded", String(!oculto));
+    }
 
-const togglePerfil = document.getElementById("togglePerfil");
-const cajaPrincipal = document.querySelector(".caja_principal");
+    boton.addEventListener("click", () => {
+        const oculto = caja.classList.toggle("perfil_oculto");
+        actualizarBoton(oculto);
+    });
 
-togglePerfil.addEventListener("click", () => {
+    // Si la pantalla sale del rango de tablet, se restablece el estado
+    const rangoTablet = window.matchMedia("(min-width: 769px) and (max-width: 1024px)");
 
-    cajaPrincipal.classList.toggle("perfil_oculto");
-
-    const oculto = cajaPrincipal.classList.contains("perfil_oculto");
-
-    // Cambiar solamente la flecha
-    const flecha = togglePerfil.querySelector("i");
-
-    flecha.classList.toggle("fa-chevron-left", !oculto);
-    flecha.classList.toggle("fa-chevron-right", oculto);
-
-    // Accesibilidad
-    togglePerfil.setAttribute(
-        "aria-label",
-        oculto ? "Mostrar contacto" : "Ocultar contacto"
-    );
-
-});
+    rangoTablet.addEventListener("change", e => {
+        if (!e.matches) {
+            caja.classList.remove("perfil_oculto");
+            actualizarBoton(false);
+        }
+    });
+})();
