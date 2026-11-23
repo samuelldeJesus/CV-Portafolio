@@ -45,7 +45,7 @@
         left: 4%;
     }
 
-    .info_hero-texto h1 {
+    .info_hero-texto h2 {
         font-size: 23px;
     }
 
@@ -126,6 +126,7 @@
     .perfil {
         width: 100%;
         flex-shrink: 0;
+        background-color: rgb(222, 220, 220);
     }
 
 
@@ -138,11 +139,14 @@
 
     .perfil_foto img {
         width: 120px;
+        height: 120px;
     }
 
-    .perfil_foto h2 {
-        font-size: 20px;
+    .perfil_foto h1 {
+        font-size: 38px;
         text-align: center;
+        color: #011327;
+        text-shadow: 0px 2px 2px rgba(0, 0, 0, 0.575);
     }
 
     .perfil_foto p {
@@ -152,6 +156,7 @@
 
     .linea {
         width: 60%;
+        box-shadow: 0px 2px 3px rgba(0, 0, 0, 0.575);
     }
 
 
@@ -302,10 +307,9 @@
     }
 
 
-    .info_hero-texto h1 {
+    .info_hero-texto h2 {
         font-size: 28px;
         line-height: 1.2;
-        color: #efefef;
     }
 
 
@@ -920,7 +924,7 @@
     }
 
 
-    .info_hero-texto h1 {
+    .info_hero-texto h2 {
         font-size: 20px;
         color: #efefef;
         text-align: center;
@@ -1077,4 +1081,535 @@
 
 .destaque_p {
     color: var(--azul-principal);
+}
+
+/* TABLET */
+@media (max-width: 1024px) {
+
+    .info_hero {
+        min-height: 500px;
+    }
+
+    .hero_picture img {
+        object-position: center;
+    }
+
+}
+
+/* MÓVIL */
+@media (max-width: 600px) {
+
+    .info_hero {
+        min-height: 650px;
+    }
+
+    .hero_overlay {
+        background: linear-gradient(
+            to top,
+            rgba(10, 25, 50, 0.90) 0%,
+            rgba(10, 25, 50, 0.45) 55%,
+            rgba(10, 25, 50, 0.10) 100%
+        );
+    }
+}
+
+/* =========================================================
+   AJUSTES FINALES (van al final para ganar a las reglas anteriores)
+========================================================= */
+
+/* ---------- 1. FOTO DEL PERFIL: sin deformar ---------- */
+
+.perfil_foto img {
+    width: 120px;
+    height: auto;
+    aspect-ratio: 1 / 1;          /* siempre cuadrada -> círculo perfecto */
+    object-fit: cover;            /* recorta, nunca estira */
+    object-position: center top;  /* mantiene el rostro visible */
+    border: 3px solid #fff;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.25);
+}
+
+
+/* ---------- 2. CONTACTOS: más espacio ---------- */
+
+.perfil_iconos {
+    gap: 18px;
+}
+
+.perfil_iconos a {
+    gap: 10px;
+    line-height: 1.4;
+}
+
+@media (max-width: 480px) {
+    .perfil_iconos {
+        gap: 16px;
+    }
+}
+
+
+/* ---------- 3. HERO: tamaño = contenido ---------- */
+
+.info_hero {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 22px;
+
+    height: auto;
+    min-height: 0;
+    margin: 0;
+    padding: 40px 5% 28px;
+}
+
+.info_hero-texto {
+    position: relative;   /* por encima del fondo */
+    z-index: 1;
+    top: auto;
+    left: auto;
+    transform: none;
+
+    width: 100%;
+    max-width: 560px;
+    padding: 0;
+    background: none;
+    text-align: left;
+}
+
+.info_hero-bloques {
+    position: relative;
+    z-index: 1;
+    left: auto;
+    right: auto;
+    bottom: auto;
+
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+
+/* ---------- 4. HERO: fondo que no estorba la lectura ---------- */
+
+.hero_overlay {
+    background: linear-gradient(
+        90deg,
+        rgba(10, 25, 50, 0.90) 0%,
+        rgba(10, 25, 50, 0.75) 55%,
+        rgba(10, 25, 50, 0.60) 100%
+    );
+}
+
+.info_hero-texto h2,
+.info_hero-texto .texto {
+    text-align: left;
+    text-shadow: 0 1px 3px rgba(0, 0, 0, 0.5);
+}
+
+.info_hero-texto h2 {
+    font-size: 26px;
+    line-height: 1.25;
+}
+
+.info_hero-texto .texto {
+    font-size: 15px;
+    line-height: 1.6;
+}
+
+.info_hero-texto .destaque_p {
+    color: #8fc2ff;
+    font-weight: 600;
+}
+
+@media (max-width: 768px) {
+    .info_hero {
+        padding: 32px 20px 24px;
+    }
+    .info_hero-texto h2 {
+        font-size: 22px;
+    }
+}
+
+
+/* ---------- 5. NAVEGACIÓN: transición suave ---------- */
+
+.info_header a {
+    background-color: transparent;
+    transition:
+        background-color 0.35s ease,
+        color 0.35s ease,
+        box-shadow 0.35s ease,
+        transform 0.3s ease;
+}
+
+.info_header a:hover {
+    background-color: rgba(7, 116, 233, 0.12);
+}
+
+.info_header a.active {
+    padding: 8px 12px;   /* mismo tamaño que los demás: no hay "salto" */
+    margin-top: 0;
+    background-color: rgb(7, 116, 233);
+    color: #fff;
+    box-shadow: 0 3px 8px rgba(7, 116, 233, 0.35);
+}
+
+/* Entrada suave de cada página */
+.pagina.active {
+    animation: paginaEntrar 0.45s ease both;
+}
+
+@keyframes paginaEntrar {
+    from { opacity: 0; transform: translateY(14px); }
+    to   { opacity: 1; transform: translateY(0); }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .pagina.active { animation: none; }
+    .info_header a { transition: none; }
+}
+
+
+/* ---------- 6. SOBRE: foto arriba-izquierda y sin recortar ---------- */
+
+.sobre_mi_presentacion {
+    align-items: flex-start;
+}
+
+.sobre_mi_imagen {
+    width: 170px;
+    height: auto;
+    overflow: visible;
+    border-radius: 16px;
+}
+
+.sobre_mi_imagen img {
+    width: 100%;
+    height: auto;          /* respeta la proporción original */
+    object-fit: contain;   /* nunca corta */
+    border-radius: 16px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+}
+
+@media (max-width: 768px) {
+    .sobre_mi_presentacion {
+        align-items: center;   /* en móvil la foto va centrada encima del texto */
+    }
+    .sobre_mi_imagen {
+        width: 150px;
+        height: auto;
+    }
+}
+
+
+/* =========================================================
+   MENÚ Y CONTACTOS EN MÓVIL Y TABLET
+========================================================= */
+
+/* ---------- Valores por defecto (escritorio) ---------- */
+
+.movil_acciones,
+.menu_tablet_btn {
+    display: none;
+}
+
+/* El contenedor de contactos no altera el diseño de escritorio/tablet */
+.perfil_contactos {
+    display: contents;
+}
+
+
+/* =========================================================
+   MÓVIL (hasta 768px): dos botones bajo la profesión
+   [ Contactos ]            [ Menú ]
+========================================================= */
+
+@media (max-width: 768px) {
+
+    /* ---------- Barra con los dos botones ---------- */
+
+    .movil_acciones {
+        display: flex;
+        justify-content: space-between;
+        gap: 12px;
+
+        width: 100%;
+        padding: 6px 20px 18px;
+    }
+
+    .movil_btn {
+        flex: 1;
+
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 8px;
+
+        padding: 10px 14px;
+
+        border: 1px solid rgba(4, 63, 90, 0.461);
+        border-radius: 20px;
+
+        background-color: rgb(209, 233, 253);
+        color: var(--azul-principal);
+
+        font-family: inherit;
+        font-size: 14px;
+        font-weight: 600;
+
+        box-shadow: inset 0 2px 2px white,
+                    inset 0 4px 10px rgb(239, 251, 254),
+                    0 2px 2px rgba(0, 0, 0, 0.4),
+                    0 6px 10px rgba(0, 0, 0, 0.6);
+
+        cursor: pointer;
+
+        transition:
+            background-color 0.3s ease,
+            color 0.3s ease,
+            box-shadow 0.3s ease,
+            transform 0.2s ease;
+    }
+
+    .movil_btn:active {
+        transform: scale(0.97);
+    }
+
+    /* Botón abierto */
+    .movil_btn[aria-expanded="true"] {
+        background-color: var(--azul-principal);
+        color: #ffffff;
+        box-shadow: 0 3px 8px rgba(7, 116, 233, 0.35);
+    }
+
+
+    /* ---------- Lista de contactos (plegable) ----------
+       Se ocultan los propios elementos, así funciona
+       aunque no exista el contenedor .perfil_contactos */
+
+    .perfil_iconos,
+    .perfil_button {
+        max-height: 0;
+        margin-top: 0;
+        margin-bottom: 0;
+        padding-top: 0;
+        padding-bottom: 0;
+        overflow: hidden;
+
+        opacity: 0;
+        visibility: hidden;
+
+        transition:
+            max-height 0.45s ease,
+            margin 0.45s ease,
+            padding 0.45s ease,
+            opacity 0.3s ease,
+            visibility 0s linear 0.45s;
+    }
+
+    .caja_principal.contactos_abiertos .perfil_iconos {
+        max-height: 700px;
+        margin: 25px;
+        opacity: 1;
+        visibility: visible;
+
+        transition:
+            max-height 0.45s ease,
+            margin 0.45s ease,
+            opacity 0.3s ease,
+            visibility 0s linear 0s;
+    }
+
+    .caja_principal.contactos_abiertos .perfil_button {
+        max-height: 120px;
+        margin: 20px auto 30px;
+        padding: 10px;
+        opacity: 1;
+        visibility: visible;
+
+        transition:
+            max-height 0.45s ease,
+            margin 0.45s ease,
+            padding 0.45s ease,
+            opacity 0.3s ease,
+            visibility 0s linear 0s;
+    }
+
+
+    /* ---------- Menú de navegación (plegable) ---------- */
+
+    .info_header {
+        position: static;
+
+        max-height: 0;
+        overflow: hidden;
+
+        opacity: 0;
+        visibility: hidden;
+
+        transition:
+            max-height 0.45s ease,
+            opacity 0.3s ease,
+            visibility 0s linear 0.45s;
+    }
+
+    .caja_principal.menu_abierto .info_header {
+        max-height: 500px;
+        opacity: 1;
+        visibility: visible;
+
+        transition:
+            max-height 0.45s ease,
+            opacity 0.3s ease,
+            visibility 0s linear 0s;
+    }
+
+    /* Enlaces en lista vertical, como un menú */
+    .info_header ul {
+        flex-direction: column;
+        align-items: stretch;
+        flex-wrap: nowrap;
+
+        gap: 6px;
+        padding: 12px 16px;
+    }
+
+    .info_header li {
+        width: 100%;
+    }
+
+    .info_header a,
+    .info_header a.active {
+        width: 100%;
+        padding: 10px 14px;
+
+        font-size: 14px;
+    }
+}
+
+
+/* =========================================================
+   TABLET (769px - 1024px)
+   - Contactos visibles  -> el menú es un botón arriba a la izquierda
+   - Contactos ocultos   -> menú normal
+========================================================= */
+
+@media (min-width: 769px) and (max-width: 1024px) {
+
+    .info_header {
+        position: relative;
+        z-index: 50;
+    }
+
+    /* ---------- Botón de menú ---------- */
+
+    .caja_principal:not(.perfil_oculto) .menu_tablet_btn {
+        display: inline-flex;
+        align-items: center;
+        gap: 8px;
+
+        margin: 10px 15px;
+        padding: 8px 16px;
+
+        border: 0;
+        border-radius: 15px;
+
+        background-color: var(--azul-principal);
+        color: #ffffff;
+
+        font-family: inherit;
+        font-size: 14px;
+        font-weight: 600;
+
+        cursor: pointer;
+        box-shadow: 0 3px 8px rgba(7, 116, 233, 0.35);
+
+        transition:
+            background-color 0.3s ease,
+            transform 0.2s ease;
+    }
+
+    .caja_principal:not(.perfil_oculto) .menu_tablet_btn:hover {
+        background-color: #0560c0;
+    }
+
+    .caja_principal:not(.perfil_oculto) .menu_tablet_btn:active {
+        transform: scale(0.97);
+    }
+
+
+    /* ---------- Lista de enlaces: desplegable bajo el botón ---------- */
+
+    .caja_principal:not(.perfil_oculto) .info_header ul {
+        position: absolute;
+        top: 100%;
+        left: 15px;
+        z-index: 60;
+
+        flex-direction: column;
+        align-items: stretch;
+        flex-wrap: nowrap;
+
+        width: max-content;
+        min-width: 230px;
+
+        gap: 4px;
+        padding: 10px;
+        margin: -4px 0 0;
+
+        background-color: #ffffff;
+        border-radius: 15px;
+        box-shadow: 0 8px 24px rgba(0, 0, 0, 0.25);
+
+        opacity: 0;
+        visibility: hidden;
+        transform: translateY(-8px);
+
+        transition:
+            opacity 0.3s ease,
+            transform 0.3s ease,
+            visibility 0s linear 0.3s;
+    }
+
+    .caja_principal:not(.perfil_oculto).menu_abierto .info_header ul {
+        opacity: 1;
+        visibility: visible;
+        transform: translateY(0);
+
+        transition:
+            opacity 0.3s ease,
+            transform 0.3s ease,
+            visibility 0s linear 0s;
+    }
+
+    .caja_principal:not(.perfil_oculto) .info_header li {
+        width: 100%;
+    }
+
+    .caja_principal:not(.perfil_oculto) .info_header a,
+    .caja_principal:not(.perfil_oculto) .info_header a.active {
+        width: 100%;
+        white-space: nowrap;
+    }
+}
+
+
+/* =========================================================
+   CAJAS DE INICIO CENTRADAS EN MÓVIL
+   (tenían width:100% + margin:10px, por eso se desplazaban a la derecha)
+========================================================= */
+
+@media (max-width: 768px) {
+
+    .info_cajas {
+        align-items: center;
+        padding: 10px 12px;
+        gap: 14px;
+    }
+
+    .info_cajas-caja {
+        width: 100%;
+        max-width: 100%;
+        margin: 0;
+        box-sizing: border-box;
+    }
 }
