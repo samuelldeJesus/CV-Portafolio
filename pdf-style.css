@@ -39,21 +39,24 @@ body {
 ========================================== */
 
 .cv-header {
-    display: flex;
-    align-items: center;
-    gap: 12px;
-
     border-bottom: 2px solid #24466b;
     padding-bottom: 14px;
-    margin-bottom: 14px;
+    margin-bottom: 26px;
 
     break-inside: avoid;
     page-break-inside: avoid;
 }
 
+/* Foto + nombre/profesión: la foto queda centrada verticalmente */
+.cv-top {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+}
+
 .cv-foto {
-    width: 70px;
-    height: 70px;
+    width: 78px;
+    height: 78px;
     object-fit: cover;
     border-radius: 50%;
     flex-shrink: 0;
@@ -68,28 +71,33 @@ body {
     color: #183957;
     font-size: 19pt;
     line-height: 1.2;
-    margin: 0 0 3px;
+    margin: 0 0 4px;
 }
 
 .profesion {
     font-size: 10pt;
     color: #52677d;
-    margin: 0 0 7px;
+    margin: 0;
 }
 
+/* Contactos debajo, en dos columnas */
 .contactos {
-    font-size: 7.5pt;
-    line-height: 1.45;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 6px 20px;
+
+    margin-top: 14px;
+    font-size: 8.5pt;
+    line-height: 1.4;
 }
 
 .contactos p {
-    margin: 1px 0;
+    margin: 0;
+    overflow-wrap: anywhere;
 }
 
-.contactos a {
+.contactos strong {
     color: #183957;
-    text-decoration: none;
-    overflow-wrap: anywhere;
 }
 
 /* ==========================================
@@ -97,7 +105,7 @@ body {
 ========================================== */
 
 section {
-    margin-bottom: 13px;
+    margin-bottom: 26px;
 }
 
 section h2 {
@@ -108,8 +116,8 @@ section h2 {
 
     border-bottom: 1px solid #cbd5e1;
 
-    padding-bottom: 4px;
-    margin: 0 0 7px;
+    padding-bottom: 5px;
+    margin: 0 0 10px;
 }
 
 section p {
@@ -121,7 +129,7 @@ section p {
 ========================================== */
 
 .item {
-    margin-bottom: 10px;
+    margin-bottom: 13px;
 
     break-inside: avoid;
     page-break-inside: avoid;
@@ -185,7 +193,7 @@ li {
 ========================================== */
 
 .proyecto {
-    margin-bottom: 9px;
+    margin-bottom: 12px;
 
     break-inside: avoid;
     page-break-inside: avoid;
@@ -237,5 +245,5 @@ a {
 
 .grupo-titulo > .item,
 .grupo-titulo > .proyecto {
-    margin-bottom: 10px;
+    margin-bottom: 13px;
 }
