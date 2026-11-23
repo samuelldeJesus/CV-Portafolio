@@ -40,7 +40,7 @@ async function generarCVPDF(boton) {
 
     // ---------- 1. LEER DATOS DE LA WEB ----------
 
-    const nombre = texto(document, ".perfil_foto h2");
+    const nombre = texto(document, ".perfil_foto h1, .perfil_foto h2");
     const profesion = texto(document, ".perfil_foto p");
     const fotoURL = document.querySelector(".perfil_foto img")?.src || "";
 
@@ -49,9 +49,9 @@ async function generarCVPDF(boton) {
 
     const telefono  = buscar((h, a) => a.getAttribute("href")?.startsWith("tel:"));
     const email     = buscar((h, a) => a.getAttribute("href")?.startsWith("mailto:"));
-    const linkedin  = buscar(h => h.includes("linkedin.com"));
-    const instagram = buscar(h => h.includes("instagram.com"));
-    const github    = buscar(h => h.includes("github.com"));
+    // Nacionalidad e idioma se identifican por su icono en la web
+    const nacionalidad = enlaces.find(a => a.querySelector(".fa-address-card"));
+    const idioma       = enlaces.find(a => a.querySelector(".fa-language"));
 
     const perfil = todos(".sobre_mi_texto p").map(p => limpiar(p)).join(" ");
 
@@ -72,15 +72,11 @@ async function generarCVPDF(boton) {
         tareas: [...item.querySelectorAll(".experiencia_info li")].map(li => limpiar(li))
     }));
 
-    const proyectos = todos(".proyecto_link").map(enlace => {
-        const proyecto = enlace.querySelector(".proyecto") || enlace;
-        const href = enlace.getAttribute("href");
-        return {
-            nombre: texto(proyecto, ".proyecto_info h3"),
-            descripcion: texto(proyecto, ".proyecto_info p"),
-            url: !href || href === "#" ? "" : enlace.href
-        };
-    });
+    const proyectos = todos(".portafolio_grid .proyecto").map(proyecto => ({
+        nombre: texto(proyecto, ".proyecto_info h3"),
+        descripcion: texto(proyecto, ".proyecto_info p"),
+        url: ""
+    }));
 
     // ---------- 2. CARGAR LA PLANTILLA EN UN IFRAME OCULTO ----------
 
@@ -90,13 +86,13 @@ async function generarCVPDF(boton) {
     const iframe = document.createElement("iframe");
     iframe.style.cssText =
         "position:fixed;left:-10000px;top:0;width:794px;height:1123px;border:0;visibility:hidden;";
-    iframe.src = "cv-pdf.html";
+    iframe.src = "cv-pdf.html?v=3";
 
     try {
 
         await new Promise((resolve, reject) => {
             iframe.onload = resolve;
-            iframe.onerror = () => reject(new Error("No se pudo cargar cv-pdf.html"));
+            iframe.onerror = () => reject(new Error("Não foi possível carregar o cv-pdf.html"));
             document.body.appendChild(iframe);
         });
 
@@ -107,7 +103,7 @@ async function generarCVPDF(boton) {
             doc = iframe.contentDocument;
             void doc.body;
         } catch (e) {
-            throw new Error("Abre el proyecto con un servidor local (Live Server) en vez de file://");
+            throw new Error("Abra o projeto com um servidor local (Live Server) em vez de file://");
         }
 
         // Esperar a la librería html2pdf
@@ -117,23 +113,33 @@ async function generarCVPDF(boton) {
             intentos++;
         }
         if (typeof win.html2pdf !== "function") {
-            throw new Error("No se ha cargado la librería html2pdf (¿sin conexión?).");
+            throw new Error("A biblioteca html2pdf não foi carregada (sem conexão?).");
         }
 
         // ---------- 3. RELLENAR LA PLANTILLA ----------
 
         const ponerTexto = (id, valor) => {
             const el = doc.getElementById(id);
-            if (el) el.textContent = valor || "";
+            if (!el) return;
+            if (valor) el.textContent = valor;
+            else el.remove();   // sin dato (ej. GitHub): no deja hueco en el PDF
         };
 
         ponerTexto("cv-nombre", nombre);
         ponerTexto("cv-profesion", profesion);
-        ponerTexto("cv-telefono", limpiar(telefono));
-        ponerTexto("cv-email", limpiar(email));
-        ponerTexto("cv-linkedin", limpiar(linkedin));
-        ponerTexto("cv-instagram", limpiar(instagram));
-        ponerTexto("cv-github", limpiar(github));
+        // Contactos: solo teléfono, email, nacionalidad e idioma
+        const ponerContacto = (id, rotulo, elementoWeb) => {
+            const el = doc.getElementById(id);
+            if (!el) return;
+            const valor = limpiar(elementoWeb);
+            if (valor) el.innerHTML = `<strong>${rotulo}:</strong> ${escapar(valor)}`;
+            else el.remove();
+        };
+
+        ponerContacto("cv-telefono", "Telefone", telefono);
+        ponerContacto("cv-email", "E-mail", email);
+        ponerContacto("cv-nacionalidad", "Nacionalidade", nacionalidad);
+        ponerContacto("cv-idioma", "Idioma", idioma);
         ponerTexto("cv-perfil", perfil);
 
         const imagenPDF = doc.getElementById("cv-foto");
@@ -224,7 +230,7 @@ async function generarCVPDF(boton) {
 
         const enlaceDescarga = document.createElement("a");
         enlaceDescarga.href = url;
-        enlaceDescarga.download = "Samuel_Barbosa_CV.pdf";
+        enlaceDescarga.download = "CV-digital.pdf";
         document.body.appendChild(enlaceDescarga);
         enlaceDescarga.click();
         enlaceDescarga.remove();
@@ -232,8 +238,8 @@ async function generarCVPDF(boton) {
         setTimeout(() => URL.revokeObjectURL(url), 10000);
 
     } catch (error) {
-        console.error("Error al generar el CV:", error);
-        alert("No se pudo generar el PDF:\n" + error.message);
+        console.error("Erro ao gerar o currículo:", error);
+        alert("Não foi possível gerar o PDF:\n" + error.message);
     } finally {
         iframe.remove();
         boton.disabled = false;
