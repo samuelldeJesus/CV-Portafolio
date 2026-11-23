@@ -14,10 +14,10 @@
     >
     <meta
         name="description"
-        content="Portfolio profesional de Samuel Barbosa, desarrollador web especializado en HTML, CSS, JavaScript, React y TypeScript.">
+        content="Currículo Digital: uma apresentação profissional moderna, organizada e acessível para destacar competências, formação e experiência.">
     <meta
         name="author"
-        content="Samuel Barbosa de Jesus">
+        content="Currículo Digital">
     <meta
         name="robots"
         content="index, follow">
@@ -26,7 +26,7 @@
          TÍTULO
     ================================================== -->
     <title>
-        Samuel Barbosa | Desarrollador Web
+        Currículo Digital | Apresentação Profissional
     </title>
     <!-- ==================================================
          FAVICON
@@ -47,19 +47,19 @@
         content="website">
     <meta
         property="og:title"
-        content="Samuel Barbosa | Desarrollador Web">
+        content="Currículo Digital | Apresentação Profissional">
     <meta
         property="og:description"
-        content="Portfolio profesional de Samuel Barbosa, desarrollador web.">
+        content="Portfolio profesional de Currículo Digital | Apresentação Profissional.">
     <meta
         property="og:image"
-        content="https://www.samuelbarbosa.com/img/preview.png">
+        content="#">
     <meta
         property="og:url"
-        content="https://www.samuelbarbosa.com/">
+        content="#">
     <meta
         property="og:site_name"
-        content="Samuel Barbosa">
+        content="Currículo Digital">
     <meta
         property="og:locale"
         content="es_ES">
@@ -73,10 +73,10 @@
         content="summary_large_image">
     <meta
         name="twitter:title"
-        content="Samuel Barbosa | Desarrollador Web">
+        content="Currículo Digital | Apresentação Profissional">
     <meta
         name="twitter:description"
-        content="Portfolio profesional de Samuel Barbosa, desarrollador web.">
+        content="Portfolio proficional de Currículo Digital | Apresentação Profissional.">
     <meta
         name="twitter:image"
         content="https://www.samuelbarbosa.com/img/preview.png">
@@ -122,8 +122,8 @@
         <button 
             id="togglePerfil" 
             class="toggle_perfil"
-            aria-label="Ocultar contacto"
-            title="Ocultar contacto"
+            aria-label="Ocultar painel de apresentação"
+            title="Ocultar painel de apresentação"
         >
             <i class="fa-solid fa-chevron-left"></i>
         </button>
@@ -137,16 +137,28 @@
 
                 <img
                     src="img/perfil.png"
-                    alt="Foto de perfil de Samuel Barbosa"
+                    alt="Imagem de perfil profissional"
                 >
 
-                <h2>Samuel Barbosa de Jesus</h2>
+                <h1>Currículo Digital</h1>
 
-                <p>Programador y desarrollador web</p>
+                <p>Apresentação profissional online</p>
 
                 <div class="linea"></div>
 
+                <div class="movil_acciones">
+                    <button type="button" id="btnContactos" class="movil_btn"
+                        aria-expanded="false" aria-controls="panelContactos">
+                        <i class="fa-solid fa-address-book"></i> Contacto
+                    </button>
+                    <button type="button" id="btnMenu" class="movil_btn"
+                        aria-expanded="false" aria-controls="menuLista">
+                        <i class="fa-solid fa-bars"></i> Menu
+                    </button>
+                </div>
+
             </div>
+
 
 
             <!-- ---------- INFORMACIÓN DE CONTACTO ---------- -->
@@ -154,24 +166,24 @@
             <div class="perfil_iconos">
 
                 <!-- Teléfono -->
-                <a href="tel:+34640718394">
+                <a href="tel:" class="abrir-modal">
 
                     <i class="fa-solid fa-phone"></i>
 
-                    +34 640 718 394
+                    Contacto profissional
 
                 </a>
 
 
                 <!-- Correo electrónico -->
                 <a
-                    href="mailto:sbarbosa373@gmail.com"
-                    target="_blank"
+                    href="mailto:"
+                    class="abrir-modal"
                 >
 
                     <i class="fa-solid fa-envelope"></i>
 
-                    sbarbosa373@gmail.com
+                    E-mail de contacto
 
                 </a>
 
@@ -181,7 +193,7 @@
 
                     <i class="fa-solid fa-address-card"></i>
 
-                    Brasileño | Residente en España
+                    Nacionalidad
 
                 </a>
 
@@ -190,33 +202,46 @@
 
                     <i class="fa-solid fa-language"></i>
 
-                    Español bilingue | Portugues-BR nativo
+                    Idiomas
+
+                </a>
+
+                <!-- LinkedIn -->
+                <a
+                    href="#"
+                    class="abrir-modal"
+                >
+
+                    <img
+                        src="img/whatsapp.png"
+                        alt="Ícone de contacto"
+                    >
+
+                    WhatsApp
 
                 </a>
 
 
                 <!-- LinkedIn -->
                 <a
-                    href="https://www.linkedin.com/in/samuel-barbosa-5b4802251/"
-                    target="_blank"
-                    rel="noopener noreferrer"
+                    href="#"
+                    class="abrir-modal"
                 >
 
                     <img
                         src="img/linkedin2.png"
-                        alt="Icono de LinkedIn"
+                        alt="Ícone de contacto"
                     >
 
-                    LinkedIn.com/Samuel_Barbosa
+                    LinkedIn
 
                 </a>
 
 
                 <!-- Instagram -->
                 <a
-                    href="https://www.instagram.com/samuell_dev/"
-                    target="_blank"
-                    rel="noopener noreferrer"
+                    href="#"
+                    class="abrir-modal"
                 >
 
                     <img
@@ -224,43 +249,10 @@
                         alt="Icono de Instagram"
                     >
 
-                    Instagram.com/Samuell_dev
+                    Instagram
 
                 </a>
 
-
-                <!-- GitHub -->
-                <a
-                    href="https://github.com/samuelldeJesus"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                >
-
-                    <img
-                        src="img/logotipo-de-github.png"
-                        alt="Icono de GitHub"
-                    >
-
-                    GitHub/SamuelldeJesus
-
-                </a>
-
-
-                <!-- Página web -->
-                <a
-                    href="#"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                >
-
-                    <img
-                        src="img/navegador.png"
-                        alt="Icono de página web"
-                    >
-
-                    www.samuelbarbosa.com
-
-                </a>
 
             </div>
 
@@ -270,14 +262,13 @@
             <div class="perfil_button">
 
                 <a
-                    href="https://t.me/Barbosa_sam"
-                    target="_blank"
-                    rel="noopener noreferrer"
+                    href="#"
+                    class="abrir-modal"
                 >
 
                     <i class="fa-solid fa-paper-plane"></i>
 
-                    Contáctame
+                    Contactame
 
                 </a>
 
@@ -300,7 +291,12 @@
 
             <nav class="info_header">
 
-                <ul>
+                <button type="button" id="btnMenuTablet" class="menu_tablet_btn"
+                    aria-expanded="false" aria-controls="menuLista">
+                    <i class="fa-solid fa-bars"></i> Menu
+                </button>
+
+                <ul id="menuLista">
 
                     <!-- Inicio -->
                     <li>
@@ -313,7 +309,7 @@
 
                             <i class="fa-solid fa-house"></i>
 
-                            Inicio
+                            Início
 
                         </a>
 
@@ -347,7 +343,7 @@
 
                             <i class="fa-solid fa-graduation-cap"></i>
 
-                            Estudios
+                            Formación
 
                         </a>
 
@@ -381,7 +377,7 @@
 
                             <i class="fa-solid fa-folder-open"></i>
 
-                            Portafolio
+                            Portfolio
 
                         </a>
 
@@ -415,54 +411,54 @@
 
                     <div class="info_hero">
 
-                        <picture>
+                        <div class="hero_fondo">
 
-                            <source
-                                media="(max-width: 768px)"
-                                srcset="img/fundomovil.png"
-                            >
+                            <picture class="hero_picture">
 
-                            <img
-                                src="img/hero.png"
-                                alt="Ordenador sobre una mesa"
-                            >
+                                <source
+                                    media="(max-width: 768px)"
+                                    srcset="img/fundomovil.png"
+                                >
 
-                        </picture>
+                                <img
+                                    src="img/hero.png"
+                                    alt="Exemplo de currículo digital"
+                                >
 
+                            </picture>
+
+                            <div class="hero_overlay"></div>
+                        </div>
 
                         <!-- Texto principal del Hero -->
 
                         <div class="info_hero-texto">
 
                             <p class="destaque_p">
-                                DESARROLLO - SOLUCIONES - IDEAS
+                                CURRÍCULUM DIGITAL - DISEÑO - PROFESIONALIDAD
                             </p>
-
-                            <h1>
-                                Transformando ideas en soluciones digitales
-                            </h1>
-
+                        
+                            <h2>
+                                Presenta tu trayectoria profesional con claridad y profesionalidad
+                            </h2>
+                        
                             <p class="texto">
-                                Desarrollador web apasionado por crear
-                                experiencias digitales modernas,
-                                funcionales y centradas en las personas.
+                                Un currículum digital reúne toda tu información profesional en una página moderna, intuitiva y adaptada a ordenadores, tablets y móviles.
                             </p>
-
+                        
                         </div>
 
 
-                        <!-- Tecnologías principales -->
+                        <!--* Tecnologías principales *-->
 
                         <div class="info_hero-bloques">
 
-                            <p>HTML</p>
-                            <p>CSS</p>
-                            <p>JavaScript</p>
-                            <p>React</p>
-                            <p>TypeScript</p>
+                            <p>Visibilidad</p>
+                            <p>Accesibilidad</p>
+                            <p>Profesionalidad</p>
+                            <p>Practicidad</p>
 
                         </div>
-
                     </div>
 
 
@@ -488,16 +484,11 @@
                             <div class="caja-texto">
 
                                 <h3 class="link">
-                                    Sobre mí
+                                    Sobre mi
                                 </h3>
 
                                 <p>
-                                    Soy una persona proactiva, responsable
-                                    y con ganas de seguir aprendiendo.
-                                    Me apasiona el desarrollo web y disfruto
-                                    creando soluciones digitales funcionales,
-                                    modernas y orientadas a las necesidades
-                                    de las personas.
+                                    Presenta quién eres, tu área de especialización y los aspectos más destacados de tu trayectoria profesional en un espacio profesional, claro y fácil de consultar.
                                 </p>
 
                                 <div class="button_ver">
@@ -513,150 +504,117 @@
                         </div>
 
 
-                        <!-- ---------- FORMACIÓN ---------- -->
-
+                        <!--* ---------- FORMACIÓN ---------- *-->
                         <div class="info_cajas-caja">
-
+                        
                             <div class="caja-icon">
-
                                 <i class="fa-solid fa-graduation-cap formacion_icon"></i>
-
                             </div>
-
-
+                        
                             <div class="caja-texto">
-
+                            
                                 <h3 class="link">
                                     Formación
                                 </h3>
-
+                            
                                 <h4 class="titulo">
-                                    Programación web en el entorno cliente
+                                    Formación académica y complementaria
                                 </h4>
-
+                            
                                 <p>
-                                    Centro de Formación FEMXA (2026)
+                                    Presenta tus estudios, cursos y certificaciones de forma organizada y profesional.
                                 </p>
-
+                            
                                 <div class="button_ver">
-
                                     <a href="#estudio">
                                         Ver más →
                                     </a>
-
                                 </div>
-
+                            
                             </div>
-
+                        
                         </div>
 
                     </div>
 
 
-
-                    <!-- ==================================================
-                         BLOQUE: EXPERIENCIA + PORTAFOLIO
-                    ================================================== -->
+                        <!--* ==================================================*
+                        * BLOQUE: EXPERIENCIA + PORTAFOLIO
+                        * ================================================== *-->
 
                     <div class="info_cajas">
-
-
-                        <!-- ---------- EXPERIENCIA ---------- -->
-
+                    
+                    
+                        <!--* ---------- EXPERIENCIA ---------- *-->
+                    
                         <div class="info_cajas-caja">
-
+                        
                             <div class="caja-icon">
-
                                 <i class="fa-solid fa-briefcase experiencia_icon"></i>
-
                             </div>
-
-
+                        
                             <div class="caja-texto">
-
-                                <h3 class="link">
-                                    Experiencia
-                                </h3>
-
+                            
+                                <h3 class="link">Experiencia</h3>
+                            
                                 <h4 class="titulo">
-                                    Desarrollador Frontend
+                                    Tu trayectoria profesional
                                 </h4>
-
-                                <p>
-                                    Freelance (2026)
-                                </p>
-
-                                <h4 class="titulo">
-                                    Prácticas en desarrollo web
-                                </h4>
-
-                                <p>
-                                    Proyectos personales (2026)
-                                </p>
-
+                            
+                                <span>
+                                    <ul>
+                                        <li>
+                                            <p>
+                                                Organiza tus experiencias laborales, funciones y logros para mostrar tu evolución profesional.
+                                            </p>
+                                        </li>
+                                    </ul>
+                                </span>
+                            
                                 <div class="button_ver">
-
                                     <a href="#experiencia">
                                         Ver más →
                                     </a>
-
                                 </div>
-
+                            
                             </div>
-
+                        
                         </div>
-
-
-                        <!-- ---------- PORTAFOLIO ---------- -->
-
+                    
+                    
+                        <!--* ---------- PORTAFOLIO ---------- *-->
+                    
                         <div class="info_cajas-caja">
-
+                        
                             <div class="caja-icon">
-
-                                <i class="fa-regular fa-folder-open portafolio_icon"></i>
-
+                                <i class="fa-solid fa-folder-open portafolio_icon"></i>
                             </div>
-
-
+                        
                             <div class="caja-texto">
-
-                                <h3 class="link">
-                                    Portafolio
-                                </h3>
-
+                            
+                                <h3 class="link">Portafolio</h3>
+                            
                                 <h4 class="titulo">
-                                    Sabor Brasileño
+                                    Una presentación profesional completa
                                 </h4>
-
+                            
                                 <p>
-                                    Página web de restaurante
+                                    Reúne tus proyectos, habilidades y logros en un espacio digital personalizado, fácil de compartir con empresas y reclutadores.
                                 </p>
-
-                                <h4 class="titulo">
-                                    Tarjeta profesional
-                                </h4>
-
-                                <p>
-                                    Tarjeta de perfil profesional
-                                </p>
-
+                            
                                 <div class="button_ver">
-
                                     <a href="#portafolio">
                                         Ver más →
                                     </a>
-
                                 </div>
-
+                            
                             </div>
-
+                        
                         </div>
-
+                    
                     </div>
-
+                    
                 </section>
-
-
 
                 <!-- ==================================================
                      PÁGINA: SOBRE MÍ
@@ -668,182 +626,168 @@
                 >
 
                     <div class="sobre_mi_contenido">
-
-
-                        <!-- ---------- TÍTULO ---------- -->
-
+                    
+                    
+                        <!--* ---------- TÍTULO ---------- *-->
+                    
                         <div class="sobre_mi_titulo">
-
+                        
                             <p class="destaque_p">
-                                CONOCE MI PERFIL
+                                DESCUBRE EL CURRÍCULUM DIGITAL
                             </p>
-
+                        
                             <h2>
-                                Sobre mí
+                                Sobre el producto
                             </h2>
-
+                        
                             <p>
-                                Una breve presentación sobre mi trayectoria,
-                                mi formación y mis objetivos profesionales.
+                                Una página web diseñada para presentar tu perfil profesional de forma moderna, práctica y accesible.
                             </p>
-
+                        
                         </div>
-
-
-                        <!-- ---------- PRESENTACIÓN ---------- -->
-
+                    
+                    
+                        <!--* ---------- PRESENTACIÓN ---------- *-->
+                    
                         <article class="sobre_mi_presentacion">
-
+                        
                             <div class="sobre_mi_imagen">
-
+                            
                                 <img
                                     src="img/perfil.png"
-                                    alt="Samuel Barbosa, desarrollador web"
+                                    alt="Imagen ilustrativa de presentación profesional"
                                 >
-
+                            
                             </div>
-
-
+                        
+                        
                             <div class="sobre_mi_texto">
-
+                            
                                 <h3>
-                                    Hola, soy Samuel
+                                    Tu perfil profesional, siempre en primer plano
                                 </h3>
-
+                            
                                 <p>
-                                    Soy brasileño y vivo en España desde
-                                    hace cuatro años. Llegué con el objetivo
-                                    de buscar nuevas oportunidades, construir
-                                    un futuro mejor para mi familia y
-                                    desarrollar nuevas metas profesionales.
+                                    El Currículum Digital es una alternativa moderna al currículum tradicional. A través de una página web personalizada, puedes reunir toda tu información profesional en un único espacio, con un diseño atractivo, organizado y fácil de consultar.
                                 </p>
-
+                            
                                 <p>
-                                    Durante estos años descubrí mi pasión
-                                    por la tecnología y comencé a formarme
-                                    en programación y desarrollo web.
-                                    Desde entonces, he dedicado tiempo a
-                                    aprender y poner en práctica mis
-                                    conocimientos mediante proyectos propios,
-                                    especialmente en el área del desarrollo
-                                    Frontend.
+                                    Presenta tu trayectoria, formación académica, experiencia laboral, habilidades y datos de contacto de una manera clara y profesional. Comparte tu perfil mediante un enlace y permite que empresas y reclutadores accedan a tu información desde cualquier dispositivo.
                                 </p>
-
+                            
                                 <p>
-                                    Actualmente trabajo con HTML, CSS y
-                                    JavaScript, y continúo ampliando mis
-                                    conocimientos en React y TypeScript.
+                                    Una solución práctica para destacar en el mercado laboral, transmitir una imagen profesional y mantener tu información siempre accesible y actualizada.
                                 </p>
-
+                            
                             </div>
-
+                        
                         </article>
-
-
-
-                        <!-- ---------- INFORMACIÓN ---------- -->
-
+                    
+                    
+                    
+                        <!--* ---------- INFORMACIÓN ---------- *-->
+                    
                         <div class="sobre_mi_cajas">
-
-
-                            <!-- Mi enfoque -->
-
+                        
+                        
+                            <!--* Mi enfoque *-->
+                        
                             <article class="sobre_mi_caja">
-
+                            
                                 <div class="sobre_mi_caja_icono">
-
+                                
                                     <img
                                         src="img/cuenta.png"
-                                        alt="Icono de perfil"
+                                        alt="Icono de perfil profesional"
                                     >
-
+                                
                                 </div>
-
+                            
                                 <div class="sobre_mi_caja_texto">
-
+                                
                                     <h3>
-                                        Mi enfoque
+                                        Todo tu perfil en un solo lugar
                                     </h3>
-
+                                
                                     <p>
-                                        Me gusta crear interfaces modernas,
-                                        claras y funcionales, prestando
-                                        atención tanto al diseño como a la
-                                        experiencia del usuario.
+                                        Reúne tus datos personales, formación, experiencia, competencias y enlaces profesionales en una página web organizada y personalizada.
                                     </p>
-
+                                
                                 </div>
-
+                            
                             </article>
-
-
-                            <!-- Mi objetivo -->
-
+                        
+                        
+                            <!--* Mi objetivo *-->
+                        
                             <article class="sobre_mi_caja">
-
+                            
                                 <div class="sobre_mi_caja_icono">
-
+                                
                                     <img
                                         src="img/maletin.png"
-                                        alt="Icono de objetivo profesional"
+                                        alt="Icono de oportunidad profesional"
                                     >
-
+                                
                                 </div>
-
+                            
                                 <div class="sobre_mi_caja_texto">
-
+                                
                                     <h3>
-                                        Mi objetivo
+                                        Una presencia profesional online
                                     </h3>
-
+                                
                                     <p>
-                                        Seguir creciendo como desarrollador
-                                        web, adquirir experiencia profesional
-                                        y participar en proyectos donde pueda
-                                        aportar mis conocimientos.
+                                        Comparte tu currículum mediante un único enlace, facilita el acceso a tu información y destaca tu perfil ante empresas, reclutadores y nuevas oportunidades laborales.
                                     </p>
-
+                                
                                 </div>
-
+                            
                             </article>
-
+                        
                         </div>
-
-
-
-                        <!-- ---------- HABILIDADES ---------- -->
-
+                    
+                    
+                    
+                        <!--* ---------- HABILIDADES ---------- *-->
+                    
                         <article class="sobre_mi_habilidades">
-
+                        
                             <div class="sobre_mi_habilidades_titulo">
-
+                            
                                 <p class="destaque_p">
-                                    TECNOLOGÍAS
+                                    RECURSOS DEL PRODUCTO
                                 </p>
-
+                            
                                 <h3>
-                                    Mis conocimientos
+                                    Principales funcionalidades
                                 </h3>
-
+                            
                             </div>
-
-
+                        
+                        
                             <div class="sobre_mi_tecnologias">
-
-                                <span>HTML</span>
-                                <span>CSS</span>
-                                <span>JavaScript</span>
-                                <span>React</span>
-                                <span>TypeScript</span>
-                                <span>Git</span>
-                                <span>GitHub</span>
-
+                            
+                                <span>Perfil personalizado</span>
+                                <span>Diseño adaptable</span>
+                                <span>Navegación intuitiva</span>
+                                <span>Presentación personal</span>
+                                <span>Formación académica</span>
+                                <span>Experiencia profesional</span>
+                                <span>Competencias y habilidades</span>
+                                <span>Enlaces de contacto</span>
+                                <span>Redes profesionales</span>
+                                <span>Versión PDF</span>
+                                <span>Acceso mediante enlace</span>
+                                <span>Estructura personalizada</span>
+                            
+                            
                             </div>
-
+                        
                         </article>
-
+                    
                     </div>
-
+                
                 </section>
 
 
@@ -858,199 +802,174 @@
                 >
 
                     <div class="formacion_contenido">
-
-
-                        <!-- ---------- TÍTULO ---------- -->
-
+                    
+                    
+                        <!--* ---------- TÍTULO ---------- *-->
+                    
                         <div class="formacion_titulo">
-
+                        
                             <p class="destaque_p">
-                                MI FORMACIÓN
+                                TU FORMACIÓN, MEJOR PRESENTADA
                             </p>
-
+                        
                             <h2>
-                                Estudios
+                                Formación académica
                             </h2>
-
+                        
                             <p>
-                                Formación académica y conocimientos
-                                adquiridos durante mi desarrollo profesional.
+                                Una sección para presentar tus estudios, títulos, cursos y certificaciones de forma organizada, destacando tus conocimientos y tu desarrollo profesional.
                             </p>
-
+                        
                         </div>
-
-
-                        <!-- ---------- LISTA DE FORMACIÓN ---------- -->
-
+                    
+                    
+                        <!--* ---------- LISTA DE FORMACIÓN ---------- *-->
+                    
+                    
                         <div class="formacion_lista">
-
-
-                            <!-- Formación 1 -->
-
+                        
+                        
+                            <!--* Formación 1 *-->
+                        
                             <article class="formacion_item">
-
+                            
                                 <div class="formacion_icono">
-
-                                    <img
-                                        src="img/sombrero-de-graduacion.png"
-                                        alt="Icono de formación"
-                                    >
-
+                                    <img src="img/sombrero-de-graduacion.png" alt="Icono de formación académica">
                                 </div>
-
-
+                            
                                 <div class="formacion_info">
-
+                                
                                     <div class="formacion_fecha">
-
-                                        <span>
-                                            2026
-                                        </span>
-
+                                        <span>01</span>
                                     </div>
-
-                                    <h3>
-                                        Programación web en el entorno cliente
-                                    </h3>
-
+                                
+                                    <h3>Estudios académicos</h3>
+                                
                                     <p class="formacion_centro">
-                                        Centro de Formación FEMXA · España
+                                        Tu recorrido educativo
                                     </p>
-
+                                
                                     <p>
-                                        Formación enfocada en el desarrollo
-                                        de aplicaciones web en el entorno
-                                        cliente, adquiriendo conocimientos
-                                        en tecnologías Frontend y desarrollo
-                                        de interfaces web.
+                                        Presenta tus estudios de forma cronológica, indicando los centros educativos, las titulaciones obtenidas y los periodos de formación.
                                     </p>
-
+                                
                                     <div class="formacion_tecnologias">
-
-                                        <span>HTML</span>
-                                        <span>CSS</span>
-                                        <span>JavaScript</span>
-                                        <span>Desarrollo Web</span>
-
+                                        <span>Estudios realizados</span>
+                                        <span>Titulaciones</span>
+                                        <span>Centros educativos</span>
                                     </div>
-
+                                
                                 </div>
-
                             </article>
-
-
-
-                            <!-- Formación 2 -->
-
+                        
+                        
+                            <!--* Formación 2 *-->
+                        
                             <article class="formacion_item">
-
+                            
                                 <div class="formacion_icono">
-
-                                    <img
-                                        src="img/sombrero-de-graduacion.png"
-                                        alt="Icono de formación"
-                                    >
-
+                                    <img src="img/sombrero-de-graduacion.png" alt="Icono de cursos y certificaciones">
                                 </div>
-
-
+                            
                                 <div class="formacion_info">
-
+                                
                                     <div class="formacion_fecha">
-
-                                        <span>
-                                            2026
-                                        </span>
-
+                                        <span>02</span>
                                     </div>
-
-                                    <h3>
-                                        Desarrollo Web Frontend
-                                    </h3>
-
+                                
+                                    <h3>Cursos y certificaciones</h3>
+                                
                                     <p class="formacion_centro">
-                                        Formación práctica · Desarrollo personal
+                                        Formación complementaria
                                     </p>
-
+                                
                                     <p>
-                                        Formación complementaria mediante
-                                        proyectos propios, centrada en la
-                                        creación de páginas web responsive,
-                                        interfaces modernas y buenas prácticas
-                                        de desarrollo.
+                                        Añade cursos, talleres, especializaciones y certificaciones que complementen tu formación y demuestren tu interés por seguir aprendiendo.
                                     </p>
-
+                                
                                     <div class="formacion_tecnologias">
-
-                                        <span>HTML</span>
-                                        <span>CSS</span>
-                                        <span>JavaScript</span>
-                                        <span>Git</span>
-                                        <span>GitHub</span>
-
+                                        <span>Cursos profesionales</span>
+                                        <span>Certificaciones</span>
+                                        <span>Especializaciones</span>
                                     </div>
-
+                                
                                 </div>
-
                             </article>
-
-
-
-                            <!-- Formación 3 -->
-
+                        
+                        
+                            <!--* Formación 3 *-->
+                        
                             <article class="formacion_item">
-
+                            
                                 <div class="formacion_icono">
-
-                                    <img
-                                        src="img/sombrero-de-graduacion.png"
-                                        alt="Icono de formación"
-                                    >
-
+                                    <img src="img/sombrero-de-graduacion.png" alt="Icono de conocimientos y habilidades">
                                 </div>
-
-
+                            
                                 <div class="formacion_info">
-
+                                
                                     <div class="formacion_fecha">
-
-                                        <span>
-                                            En curso
-                                        </span>
-
+                                        <span>03</span>
                                     </div>
-
-                                    <h3>
-                                        React y TypeScript
-                                    </h3>
-
+                                
+                                    <h3>Conocimientos y especialidades</h3>
+                                
                                     <p class="formacion_centro">
-                                        Formación autodidacta
+                                        Destaca lo que has aprendido
                                     </p>
-
+                                
                                     <p>
-                                        Aprendizaje continuo orientado al
-                                        desarrollo de aplicaciones web
-                                        modernas utilizando componentes,
-                                        interfaces dinámicas y tipado estático.
+                                        Relaciona tu formación con los conocimientos y competencias que has adquirido. Así, quienes consulten tu perfil podrán identificar mejor tus áreas de especialización.
                                     </p>
-
+                                
                                     <div class="formacion_tecnologias">
-
-                                        <span>React</span>
-                                        <span>TypeScript</span>
-                                        <span>JavaScript</span>
-
+                                        <span>Conocimientos técnicos</span>
+                                        <span>Competencias</span>
+                                        <span>Áreas de especialización</span>
                                     </div>
-
+                                
                                 </div>
-
                             </article>
-
+                        
+                        
+                            <!--* Formación 4 *-->
+                        
+                            <article class="formacion_item">
+                            
+                                <div class="formacion_icono">
+                                    <img src="img/sombrero-de-graduacion.png" alt="Icono de desarrollo profesional">
+                                </div>
+                            
+                                <div class="formacion_info">
+                                
+                                    <div class="formacion_fecha">
+                                        <span>04</span>
+                                    </div>
+                                
+                                    <h3>Desarrollo profesional continuo</h3>
+                                
+                                    <p class="formacion_centro">
+                                        Tu evolución a lo largo del tiempo
+                                    </p>
+                                
+                                    <p>
+                                        Mantén tu formación actualizada incorporando nuevos estudios, cursos y certificaciones. Una forma de mostrar tu evolución y compromiso con el crecimiento profesional.
+                                    </p>
+                                
+                                    <div class="formacion_tecnologias">
+                                        <span>Formación continua</span>
+                                        <span>Actualización profesional</span>
+                                        <span>Aprendizaje constante</span>
+                                    </div>
+                                
+                                </div>
+                            </article>
+                        
+                        
                         </div>
-
+                    
+                    
                     </div>
-
+                
                 </section>
 
 
@@ -1059,176 +978,245 @@
                      PÁGINA: EXPERIENCIA
                 ================================================== -->
 
+                
                 <section
                     id="experiencia"
                     class="pagina"
                 >
 
                     <div class="experiencia_contenido">
-
-
-                        <!-- ---------- TÍTULO ---------- -->
-
+                    
+                    
+                        <!--* ---------- TÍTULO ---------- *-->
+                    
                         <div class="experiencia_titulo">
-
+                        
                             <p class="destaque_p">
-                                MI TRAYECTORIA
+                                DESCUBRE CÓMO PRESENTAR TU TRAYECTORIA
                             </p>
-
+                        
                             <h2>
-                                Experiencia
+                                Experiencia profesional
                             </h2>
-
+                        
                             <p>
-                                Experiencia práctica y proyectos desarrollados
-                                durante mi formación.
+                                Una sección diseñada para mostrar tu trayectoria laboral, destacar tus responsabilidades y transmitir confianza a empresas y reclutadores.
                             </p>
-
+                        
                         </div>
-
-
-                        <!-- ---------- LISTA DE EXPERIENCIA ---------- -->
-
+                    
+                    
+                        <!--* ---------- LISTA DE EXPERIENCIA ---------- *-->
+                    
                         <div class="experiencia_lista">
-
-
-                            <!-- Experiencia 1 -->
-
+                        
+                        
+                            <!--* Experiencia 1 *-->
+                        
                             <article class="experiencia_item">
-
+                            
                                 <div class="experiencia_fecha">
-
+                                
                                     <span>
-                                        2026
+                                        Etapa 01
                                     </span>
-
+                                
                                 </div>
-
-
+                            
+                            
                                 <div class="experiencia_info">
-
+                                
                                     <h3>
-                                        Desarrollador Web Junior
+                                        Presenta tu trayectoria profesional
                                     </h3>
-
+                                
                                     <p class="experiencia_empresa">
-                                        Freelance · Madrid, España
+                                        Experiencia laboral organizada
                                     </p>
-
+                                
                                     <p>
-                                        Desarrollo de páginas web responsive
-                                        para pequeños negocios y proyectos
-                                        personales, utilizando tecnologías
-                                        modernas de desarrollo Frontend.
+                                        Incluye tus experiencias laborales de forma clara y estructurada, indicando las empresas, los puestos desempeñados y los periodos de actividad.
                                     </p>
-
+                                
                                     <ul>
-
+                                    
                                         <li>
-                                            Desarrollo de interfaces con HTML y CSS.
+                                            Nombre de las empresas y organizaciones.
                                         </li>
-
+                                    
                                         <li>
-                                            Implementación de funcionalidades
-                                            con JavaScript.
+                                            Puestos y cargos desempeñados.
                                         </li>
-
+                                    
                                         <li>
-                                            Diseño responsive para diferentes
-                                            dispositivos.
+                                            Fechas de inicio y finalización.
                                         </li>
-
+                                    
                                         <li>
-                                            Control de versiones con Git y GitHub.
+                                            Descripción de las funciones realizadas.
                                         </li>
-
+                                    
+                                        <li>
+                                            Trayectoria profesional organizada cronológicamente.
+                                        </li>
+                                    
                                     </ul>
-
-
+                                
+                                
                                     <div class="experiencia_tecnologias">
-
-                                        <span>HTML</span>
-                                        <span>CSS</span>
-                                        <span>JavaScript</span>
-                                        <span>Git</span>
-
+                                    
+                                        <span>Experiencia laboral</span>
+                                        <span>Cargos desempeñados</span>
+                                        <span>Trayectoria</span>
+                                        <span>Organización</span>
+                                    
                                     </div>
-
+                                
                                 </div>
-
+                            
                             </article>
-
-
-
-                            <!-- Experiencia 2 -->
-
+                        
+                        
+                        
+                            <!--* Experiencia 2 *-->
+                        
                             <article class="experiencia_item">
-
+                            
                                 <div class="experiencia_fecha">
-
+                                
                                     <span>
-                                        2026
+                                        Etapa 02
                                     </span>
-
+                                
                                 </div>
-
-
+                            
+                            
                                 <div class="experiencia_info">
-
+                                
                                     <h3>
-                                        Prácticas de Desarrollo Web
+                                        Destaca tus habilidades y logros
                                     </h3>
-
+                                
                                     <p class="experiencia_empresa">
-                                        Proyectos personales · Madrid, España
+                                        Una presentación que muestra tu valor profesional
                                     </p>
-
+                                
                                     <p>
-                                        Participación en proyectos de
-                                        desarrollo web como parte de mi
-                                        formación profesional, colaborando
-                                        en la creación y mantenimiento de
-                                        diferentes páginas web.
+                                        No se trata solamente de indicar dónde has trabajado, sino también de explicar qué sabes hacer, qué responsabilidades has asumido y qué aportas como profesional.
                                     </p>
-
+                                
                                     <ul>
-
+                                    
                                         <li>
-                                            Maquetación de páginas web.
+                                            Descripción de las principales responsabilidades.
                                         </li>
-
+                                    
                                         <li>
-                                            Corrección de errores y mejoras visuales.
+                                            Habilidades técnicas y profesionales.
                                         </li>
-
+                                    
                                         <li>
-                                            Implementación de componentes con JavaScript.
+                                            Proyectos y logros destacados.
                                         </li>
-
+                                    
                                         <li>
-                                            Trabajo con Git y GitHub.
+                                            Funciones y competencias desarrolladas.
                                         </li>
-
+                                    
+                                        <li>
+                                            Información adaptada a tu perfil profesional.
+                                        </li>
+                                    
                                     </ul>
-
-
+                                
+                                
                                     <div class="experiencia_tecnologias">
-
-                                        <span>HTML</span>
-                                        <span>CSS</span>
-                                        <span>JavaScript</span>
-                                        <span>GitHub</span>
-
+                                    
+                                        <span>Habilidades</span>
+                                        <span>Competencias</span>
+                                        <span>Logros profesionales</span>
+                                        <span>Proyectos</span>
+                                        <span>Especialización</span>
+                                    
                                     </div>
-
+                                
                                 </div>
-
+                            
                             </article>
-
+                        
+                        
+                        
+                            <!--* Experiencia 3 *-->
+                        
+                            <article class="experiencia_item">
+                            
+                                <div class="experiencia_fecha">
+                                
+                                    <span>
+                                        Etapa 03
+                                    </span>
+                                
+                                </div>
+                            
+                            
+                                <div class="experiencia_info">
+                                
+                                    <h3>
+                                        Comparte tu perfil profesional
+                                    </h3>
+                                
+                                    <p class="experiencia_empresa">
+                                        Más visibilidad para nuevas oportunidades
+                                    </p>
+                                
+                                    <p>
+                                        Una vez completada tu información, podrás compartir tu currículum mediante un enlace personalizado. Las empresas y los reclutadores podrán consultar tu experiencia desde cualquier dispositivo.
+                                    </p>
+                                
+                                    <ul>
+                                    
+                                        <li>
+                                            Comparte tu trayectoria mediante un único enlace.
+                                        </li>
+                                    
+                                        <li>
+                                            Facilita el acceso a tu información profesional.
+                                        </li>
+                                    
+                                        <li>
+                                            Incorpora enlaces a tus redes profesionales.
+                                        </li>
+                                    
+                                        <li>
+                                            Ofrece una presentación moderna y accesible.
+                                        </li>
+                                    
+                                        <li>
+                                            Complementa tu perfil con una versión en PDF.
+                                        </li>
+                                    
+                                    </ul>
+                                
+                                
+                                    <div class="experiencia_tecnologias">
+                                    
+                                        <span>Enlace personalizado</span>
+                                        <span>Acceso online</span>
+                                        <span>Redes profesionales</span>
+                                        <span>Versión PDF</span>
+                                        <span>Visibilidad profesional</span>
+                                    
+                                    </div>
+                                
+                                </div>
+                            
+                            </article>
+                        
+                        
                         </div>
-
+                    
                     </div>
-
+                
                 </section>
 
 
@@ -1237,214 +1225,155 @@
                      PÁGINA: PORTAFOLIO
                 ================================================== -->
 
+                                
                 <section
                     id="portafolio"
                     class="pagina"
                 >
 
                     <div class="portafolio_contenido">
-
-
-                        <!-- ---------- TÍTULO ---------- -->
-
+                    
+                        <!--* ---------- TÍTULO ---------- *-->
+                    
                         <div class="portafolio_titulo">
-
+                        
                             <p class="destaque_p">
-                                MIS PROYECTOS
+                                DESCUBRE LAS VENTAJAS DEL CURRÍCULUM DIGITAL
                             </p>
-
+                        
                             <h2>
-                                Portafolio
+                                Una presentación profesional completa
                             </h2>
-
+                        
                             <p>
-                                Algunos de los proyectos que he desarrollado
-                                durante mi formación.
+                                Descubre las principales funcionalidades que transforman un currículum tradicional en una presentación digital moderna, atractiva y accesible.
                             </p>
-
+                        
                         </div>
-
-
-                        <!-- ---------- GRID DE PROYECTOS ---------- -->
-
+                    
+                    
+                        <!--* ---------- GRID DE COMPETENCIAS ---------- *-->
+                    
                         <div class="portafolio_grid">
-
-
-                            <!-- ==================================================
-                                 PROYECTO 1 — MAGI'KARP
-                            ================================================== -->
-
-                            <a
-                                href="https://samuelldejesus.github.io/MagiKarp.sb/"
-                                class="proyecto_link"
-                                target="_blank"
-                                rel="noopener noreferrer"
-                            >
-                                <article class="proyecto">
-
-                                    <!-- Imagen del proyecto -->
-
-                                    <div class="proyecto_imagen">
-
-                                        <img
-                                            src="img/proyectos/compartilhar.png"
-                                            alt="Página web del restaurante Sabor Brasileño"
-                                        >
-
+                        
+                        
+                            <!--* ÁREA 1 — ORGANIZACIÓN *-->
+                        
+                            <article class="proyecto">
+                            
+                                <div class="proyecto_imagen">
+                                
+                                    <img
+                                        src="img/proyectos/Area1.png"
+                                        alt="Organización de la información del currículum digital"
+                                    >
+                                
+                                </div>
+                            
+                                <div class="proyecto_info">
+                                
+                                    <h3>
+                                        Toda tu información organizada
+                                    </h3>
+                                
+                                    <p>
+                                        Reúne tus datos personales, formación académica, experiencia profesional y competencias en una única página. Una estructura clara que facilita la consulta de tu trayectoria y permite destacar la información más importante de tu perfil.
+                                    </p>
+                                
+                                    <div class="proyecto_tecnologias">
+                                    
+                                        <span>Perfil personalizado</span>
+                                        <span>Diseño organizado</span>
+                                        <span>Información profesional</span>
+                                    
                                     </div>
-
-
-                                    <!-- Información del proyecto -->
-
-                                    <div class="proyecto_info">
-
-                                        <h3>
-                                            Acuaterrario MagiKarp
-                                        </h3>
-
-                                        <p>
-                                            Página web para una marca brasileña especializada en acuarios, aquaterrarios y terrarios decorativos, con diseños innovadores y creaciones personalizadas que combinan naturaleza y creatividad. El sitio cuenta con un diseño moderno, atractivo y totalmente adaptable a dispositivos móviles, tablets y ordenadores.
-                                        </p>
-
-
-                                        <!-- Tecnologías -->
-
-                                        <div class="proyecto_tecnologias">
-
-                                            <span>HTML</span>
-                                            <span>CSS</span>
-                                            <span>JavaScript</span>
-
-                                        </div>
-
-
-                                        <!-- Enlace -->
-
+                                
+                                </div>
+                            
+                            </article>
+                        
+                        
+                        
+                            <!--* ÁREA 2 — DISEÑO Y PERSONALIZACIÓN *-->
+                        
+                            <article class="proyecto">
+                            
+                                <div class="proyecto_imagen">
+                                
+                                    <img
+                                        src="img/proyectos/Area2.png"
+                                        alt="Diseño personalizado y adaptable del currículum digital"
+                                    >
+                                
+                                </div>
+                            
+                                <div class="proyecto_info">
+                                
+                                    <h3>
+                                        Diseño moderno y personalizado
+                                    </h3>
+                                
+                                    <p>
+                                        Presenta tu perfil con una imagen profesional y una navegación intuitiva. El diseño adaptable permite consultar tu currículum desde ordenadores, tablets y móviles, ofreciendo una experiencia cómoda y visualmente atractiva.
+                                    </p>
+                                
+                                    <div class="proyecto_tecnologias">
+                                    
+                                        <span>Diseño responsive</span>
+                                        <span>Personalización</span>
+                                        <span>Navegación intuitiva</span>
+                                    
                                     </div>
-
-                                </article>
-                            </a>
-
-
-                            <!-- ==================================================
-                                 PROYECTO 2 — CURRICULUM PROFESIONAL
-                            ================================================== -->
-                            <a
-                                href="#"
-                                class="proyecto_link"
-                                target="_blank"
-                                rel="noopener noreferrer"
-                            >
-                                <article class="proyecto">
-
-                                    <!-- Imagen del proyecto -->
-
-                                    <div class="proyecto_imagen">
-
-                                        <img
-                                            src="img/proyectos/cv.png"
-                                            alt="Tarjeta de perfil profesional"
-                                        >
-
+                                
+                                </div>
+                            
+                            </article>
+                        
+                        
+                        
+                            <!--* ÁREA 3 — ACCESIBILIDAD Y CONTACTO *-->
+                        
+                            <article class="proyecto">
+                            
+                                <div class="proyecto_imagen">
+                                
+                                    <img
+                                        src="img/proyectos/Area3.png"
+                                        alt="Acceso y facilidad para compartir el currículum digital"
+                                    >
+                                
+                                </div>
+                            
+                                <div class="proyecto_info">
+                                
+                                    <h3>
+                                        Más facilidad para compartir
+                                    </h3>
+                                
+                                    <p>
+                                        Comparte tu currículum mediante un enlace personalizado y facilita el acceso a tu información profesional. Incorpora tus redes sociales, medios de contacto y una versión PDF para que empresas y reclutadores puedan consultar tu perfil fácilmente.
+                                    </p>
+                                
+                                    <div class="proyecto_tecnologias">
+                                    
+                                        <span>Enlace personalizado</span>
+                                        <span>Redes profesionales</span>
+                                        <span>Contacto directo</span>
+                                        <span>Versión PDF</span>
+                                    
                                     </div>
-
-
-                                    <!-- Información del proyecto -->
-
-                                    <div class="proyecto_info">
-
-                                        <h3>
-                                            Curriculom digital profesional
-                                        </h3>
-
-                                        <p>
-                                            Curriculom digital de presentación
-                                            y perfil profesional desarrollada
-                                            para mostrar información de contacto.
-                                        </p>
-
-
-                                        <!-- Tecnologías -->
-
-                                        <div class="proyecto_tecnologias">
-
-                                            <span>HTML</span>
-                                            <span>CSS</span>
-                                            <span>JavaScript</span>
-
-                                        </div>
-
-
-                                        <!-- Enlace -->
-
-                                    </div>
-
-                                </article>
-                            </a>
-
-
-                            <!-- ==================================================
-                                PROYECTO 3 — TARJETA PROFESIONAL
-                            ================================================== -->
-
-                            <a
-                                href="https://samuelldejesus.github.io/tarjeta-samuel/"
-                                class="proyecto_link"
-                                target="_blank"
-                                rel="noopener noreferrer"
-                            >
-                                <article class="proyecto">
-
-                                    <!-- Imagen del proyecto -->
-
-                                    <div class="proyecto_imagen">
-
-                                        <img
-                                            src="img/proyectos/Tarjetas.png"
-                                            alt="Tarjeta de perfil profesional"
-                                        >
-
-                                    </div>
-
-
-                                    <!-- Información del proyecto -->
-
-                                    <div class="proyecto_info">
-
-                                        <h3>
-                                            Tarjeta Profesional
-                                        </h3>
-
-                                        <p>
-                                            Tarjeta digital de presentación
-                                            y perfil profesional desarrollada
-                                            para mostrar información de contacto.
-                                        </p>
-
-
-                                        <!-- Tecnologías -->
-
-                                        <div class="proyecto_tecnologias">
-
-                                            <span>HTML</span>
-                                            <span>CSS</span>
-                                            <span>JavaScript</span>
-
-                                        </div>
-
-
-                                        <!-- Enlace -->
-
-                                    </div>
-
-                                </article>
-                            </a>
-
+                                
+                                </div>
+                            
+                            </article>
+                        
+                        
                         </div>
-
+                    
                     </div>
-
+                
                 </section>
+
 
 
             </div>
@@ -1457,12 +1386,115 @@
     <!-- Fin de caja_principal -->
 
 
+
+    <!-- MODAL INFORMATIVO -->
+<div class="modal-overlay" id="modalInfo">
+
+    <div class="modal-container">
+
+        <button class="modal-cerrar" id="cerrarModal" aria-label="Cerrar">
+            &times;
+        </button>
+
+        <div class="modal-icono">
+            <i class="fa-solid fa-circle-info"></i>
+        </div>
+
+        <div class="modal-contenido">
+
+            <span class="modal-etiqueta">INFORMACIÓN IMPORTANTE</span>
+
+            <h2>Sobre este Currículum Digital</h2>
+
+            <p class="modal-descripcion">
+                Este espacio es una presentación digital de carácter
+                demostrativo, diseñada para mostrar la trayectoria,
+                formación, experiencia y competencias profesionales.
+            </p>
+
+            <div class="modal-aviso">
+
+                <i class="fa-solid fa-share-nodes"></i>
+
+                <div>
+                    <h3>Redes sociales y enlaces</h3>
+
+                    <p>
+                        Los iconos y enlaces de redes sociales incluidos
+                        en esta presentación son elementos ilustrativos.
+                        No representan perfiles reales ni garantizan
+                        acceso a cuentas activas.
+                    </p>
+                </div>
+
+            </div>
+
+            <div class="modal-aviso">
+
+                <i class="fa-solid fa-file-lines"></i>
+
+                <div>
+                    <h3>Contenido de presentación</h3>
+
+                    <p>
+                        La información y los elementos visuales tienen
+                        como finalidad mostrar el formato y las posibilidades
+                        de un currículum digital profesional.
+                    </p>
+                </div>
+
+            </div>
+
+            <p class="modal-final">
+                Gracias por visitar esta presentación.
+            </p>
+
+        </div>
+
+        <div class="modal-botones">
+
+            <button class="modal-boton" id="aceptarModal">
+                Entendido
+            </button>
+        
+            <a
+                href="https://wa.me/34640718394?text=Hola%2C%20estoy%20interesado%20en%20crear%20mi%20Curr%C3%ADculum%20Digital.%20%C2%BFPodr%C3%ADais%20darme%20m%C3%A1s%20informaci%C3%B3n%3F"
+                class="modal-boton modal-boton-interes"
+                target="_blank"
+                rel="noopener noreferrer"
+            >
+                <i class="fa-brands fa-whatsapp"></i>
+                Me interesa
+            </a>
+        
+        </div>
+
+    </div>
+
+</div>
+
+<!-- MODAL PORTFOLIO -->
+<div class="portfolio-modal" id="portfolioModal">
+
+    <button class="portfolio-modal-cerrar" id="cerrarPortfolio"
+        aria-label="Cerrar imagen">
+        &times;
+    </button>
+
+
+
+    <div class="portfolio-modal-contenido">
+        <img src="" alt="Imagen ampliada del portfolio" id="imagenAmpliada">
+    </div>
+
+</div>
+
     <!-- ==================================================
          JAVASCRIPT
     ================================================== -->
 
 <script src="script.js"></script>
-<script src="generar-pdf.js"></script>
+<script src="generar-pdf.js?v=3"></script>
 </body>
 
 </html>
